@@ -57,21 +57,12 @@ let burger2 = document.querySelector('.burger-menu.active');
 let string1 = document.querySelector('.string-1');
 let string2 = document.querySelector('.string-2');
 let string3 = document.querySelector('.string-3');
+let burgerMenu = document.querySelector('.burger-menu-container');
 let a = 1;
-if (a == 1) {
-  burger.onclick = function(){
-    string1.classList.toggle('active');
-    string2.classList.toggle('active');
-    string3.classList.toggle('active');
-    a = a + 1;
-  }
-}
-
-if (a == 2) {
-  burger2.onclick = function(){
-    string1.classList.toggle('default');
-    string2.classList.toggle('default');
-    string3.classList.toggle('default');
-    a = a - 1;
-  }
+burger.onclick = function(){
+  string1.classList.toggle('active');
+  string2.classList.toggle('active');
+  string3.classList.toggle('active');
+  burgerMenu.classList.toggle('active');
+  a = a + 1;
 }

@@ -26,6 +26,34 @@ body {
     display: none;
 }
 
+.burger-menu-container {
+    opacity: 0;
+    width: 80px;
+    padding: 10px;
+    background-color: #EDF5E1;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 100;
+    top: 60px;
+    transform: translateX(-110px);
+    outline: #05386B 2px solid;
+}
+
+.burger-menu-container.active {
+    transform: translateX(10px);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.burger-nav-item {
+    text-decoration: none;
+    color: #05386B;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+}
+
 .header-background {
     max-width: 1200px;
     border-radius: 25px;
@@ -411,6 +439,7 @@ body {
 
 .works-container {
     margin-left: 150px;
+    margin-right: 150px;
     margin-bottom: 130px;
 }
 
@@ -422,14 +451,18 @@ body {
 
 .works-flex-item {
     background-color: #EDF5E1;
-    width: 320px;
+    width: calc((100% - 340px) / 4);
     height: 400px;
     border-radius: 30px;
 }
 
+.works-flex-item:not(:last-child) {
+    margin-right: 113px;
+}
+
 .item-1 {
     background-image: url(../img/logo-works-evklid.svg);
-    background-size: 260px 150px;
+    background-size: 80% 150px;
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
@@ -437,7 +470,7 @@ body {
 
 .item-2 {
     background-image: url(../img/logo-works-lagoona.svg);
-    background-size: 260px 150px;
+    background-size: 80% 150px;
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
@@ -607,6 +640,56 @@ body {
 }
 
 @media (max-width: 1750px) {
+    .phone {
+        height: 600px;
+    }
+
+    .aboutme-title {
+        font-size: 35px;
+        left: 95px;
+    }
+
+    .touch {
+        top: 360px;
+        width: 80px;
+        height: 140px;
+    }
+
+    .touch:hover {
+        width: 80px;
+        height: 140px;
+    }
+
+    .phone-background {
+        height: 700px;
+    }
+
+    .scrollbar-phone {
+        right: 81px;
+        top: 35px;
+        height: 503px;
+    }
+
+    .back {
+        top: 400px;
+    }
+
+    .aboutme-text {
+        width: 250px;
+        top: 180px;
+        left: 80px;
+        font-size: 15px;
+    }
+
+    .my-photo {
+        height: 600px;
+        
+    }
+
+    .phone {
+        margin-right: 70px;
+    }
+
     .skills-container {
         max-height: 550px;
     }
@@ -627,11 +710,52 @@ body {
     .flex-block {
         width: 100%;
     }
+
+    .aboutme-container {
+        margin-bottom: 90px;
+    }
+
+    .skills-item {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    .stack-title {
+        margin-bottom: 30px;
+    }
+
+    .stack-container {
+        min-height: 0;
+        height: 500px;
+    }
 }
 
 @media (max-width: 1550px) {
     .my-photo {
         height: 400px;
+    }
+
+    .works-flex-item {
+        height: 300px;
+        width: calc((100% - 240px) / 4);
+    }
+
+    .works-flex-item:not(:last-child) {
+        margin-right: 80px;
+    }
+
+    .works-descr {
+        font-size: 15px;
+        line-height: 20px;
+        top: 120px;
+    }
+
+    .works-btn {
+        width: 110px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: 10px;
     }
 
     .phone-background {
@@ -719,9 +843,54 @@ body {
         max-width: calc(100% - 150px);
     }
 
+    .works-flex-item {
+        height: 240px;
+        width: calc((100% - 120px) / 4);
+    }
+
+    .works-flex-item:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .works-descr {
+        font-size: 15px;
+        line-height: 20px;
+        top: 80px;
+    }
+
+    .works-btn {
+        width: 110px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: 10px;
+    }
+
+    .item-1 {
+        background-size: 80% 80px;
+    }
+
+    .item-2 {
+        background-size: 80% 80px;
+    }
+
     .header-background {
         max-width: 100%;
         margin: 0;
+    }
+
+    .stack-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .skills-content {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .skills-item {
+        font-size: 15px;
+        line-height: 15px;
     }
 }
 
@@ -729,6 +898,26 @@ body {
     .header-nav-item:not(:last-child) {
         margin-right: 20px;
     }   
+
+    .aboutme-container {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+
+    .phone {
+        margin-right: 30px;
+    }
+
+    .stack-container {
+        margin-left: 75px;
+        margin-right: 75px;
+        width: calc(100% - 150px);
+    }
+
+    .works-container {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
 }
 
 @media (max-width: 870px) {
@@ -736,10 +925,155 @@ body {
         margin-left: 0;
         margin-right: 0;
         max-width: 100%;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .works-flex-item {
+        height: 210px;
+        width: calc((100% - 90px) / 4);
+    }
+
+    .works-flex-item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .works-descr {
+        font-size: 12px;
+        line-height: 18px;
+        top: 70px;
+        width: 120px;
+        display: inline-block;
+        left: 15px;
+    }
+
+    .works-title {
+        font-size: 30px;
+        padding-top: 10px;
+    }
+
+    .title-container {
+        width: 400px;
+        height: 50px;
+        margin-bottom: 40px;
+    }
+
+    .works-btn {
+        width: 70px;
+        height: 20px;
+        bottom: 25px;
+        border-radius: 8px;
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .item-1 {
+        background-size: 80% 80px;
+    }
+
+    .item-2 {
+        background-size: 80% 80px;
+    }
+
+    .header-background {
+        height: 40px;
     }
 
     .header-nav-item {
         font-size: 15px;
+    }
+
+    .phone-background {
+        height: 330px;
+    }
+
+    .phone {
+        margin-right: 0px;
+        height: 280px;
+        width: 160px;
+        margin-right: 20px;
+    }
+
+    .aboutme-title {
+        font-size: 18px;
+        top: 25px;
+        left: 20px;
+    }
+
+    .scrollbar-phone {
+        top: 16px;
+        right: 15px;
+        width: 12px;
+        height: 233px;
+    }
+
+    .touch {
+        width: 30px;
+        height: 60px;
+        top: 180px;
+        left: 90px;
+    }
+
+    .touch:hover {
+        width: 30px;
+        height: 60px;
+    }
+
+    .aboutme-text {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        width: 110px;
+        top: 130px;
+        left: 17px;
+    }
+
+    .back {
+        width: 20px;
+        height: 20px;
+        top: 215px;
+        left: 100px;
+    }
+
+    .back:hover {
+        width: 30px;
+        height: 30px;
+    }
+
+    .my-photo {
+        height: 280px;
+    }
+
+    .aboutme-container {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 750px) {
+    .works-flex-item {
+        height: 150px;
+        width: calc((100% - 90px) / 4);
+        border-radius: 15px;
+    }
+
+    .works-flex-item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .works-descr {
+        font-size: 8px;
+        line-height: 10px;
+        top: 60px;
+        width: 80px;
+    }
+
+    .works-btn {
+        right: 15px;
+    }
+
+    .works-title {
+        font-size: 30px;
+        padding-top: 10px;
     }
 }
 
@@ -749,6 +1083,33 @@ body {
         width: 40px;
         height: 28px;
         cursor: pointer;
+    }
+
+    .works-flex-item {
+        height: 110px;
+        width: calc((100% - 90px) / 4);
+        border-radius: 15px;
+    }
+
+    .works-flex-item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .works-descr {
+        font-size: 8px;
+        line-height: 10px;
+        top: 60px;
+        width: 80px;
+    }
+
+    .works-btn {
+        right: 15px;
+    }
+
+    .stack-container {
+        margin-left: 25px;
+        margin-right: 25px;
+        width: calc(100% - 50px);
     }
 
     .burger-strings {
@@ -761,22 +1122,22 @@ body {
 
     .string-1.active {
         transition: transform 0.5s ease-in-out;
-        transform: translateY(11px) rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
     }
 
     .string-1.default {
         transition: transform 0.5s ease-in-out;
-        transform: translateY(-11px) rotate(-45deg);
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .string-3.active {
         transition: transform 0.5s ease-in-out;
-        transform: translateY(-11px) rotate(-45deg);
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .string-3.default {
         transition: transform 0.5s ease-in-out;
-        transform: translateY(11px) rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
     }
 
     .string-2.active {
@@ -795,5 +1156,111 @@ body {
 
     .header-nav-item {
         display: none;
+    }
+
+    .burger-menu {
+        width: 30px;
+    }
+
+    .header-nav{
+        width: calc(100% - 300px);
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    
+    .header-background {
+        height: 25px;
+        border-radius: 10px;
+        width: calc(100% - 60px);
+    }
+
+    .burger-menu {
+        height: 20px;
+    }
+
+    .burger-strings {
+        height: 4px;
+        width: 30px;
+    }
+
+    .burger-strings:not(:last-child) {
+        margin-bottom: 3px;
+    }
+
+    .aboutme-container {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .phone-background {
+        height: 200px;
+    }
+
+    .phone {
+        margin-right: 0px;
+        height: 170px;
+        width: 90px;
+        margin-right: 20px;
+    }
+
+    .aboutme-title {
+        font-size: 12px;
+        top: 22px;
+        left: 10px;
+    }
+
+    .scrollbar-phone {
+        top: 13px;
+        right: 7px;
+        width: 6px;
+        height: 136px;
+    }
+
+    .touch {
+        width: 20px;
+        height: 40px;
+        top: 110px;
+        left: 50px;
+    }
+
+    .touch:hover {
+        width: 20px;
+        height: 40px;
+    }
+
+    .aboutme-text {
+        font-weight: 400;
+        font-size: 6px;
+        line-height: 7px;
+        width: 65px;
+        top: 120px;
+        left: 9px;
+    }
+
+    .back {
+        width: 15px;
+        height: 15px;
+        top: 125px;
+        left: 50px;
+    }
+
+    .back:hover {
+        width: 15px;
+        height: 15px;
+        height: 30px;
+    }
+
+    .my-photo {
+        height: 170px;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-nav {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        width: calc(100% - 200px);
     }
 }
